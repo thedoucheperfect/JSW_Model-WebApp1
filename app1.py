@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from FinalModel1 import predict_power
-
+import os
 app = Flask(__name__)
 
 @app.route('/')
@@ -24,6 +24,6 @@ def predict():
                            ip_wt=ip_wt,
                            thickness_actual=thickness_actual,
                            number_of_passes=number_of_passes)
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
