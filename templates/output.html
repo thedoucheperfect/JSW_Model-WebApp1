@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #e8f5e9; /* Light Green Background */
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #388e3c; /* Darker Green Text */
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f8e9; /* Lighter Green Result */
+            border-left: 6px solid #4CAF50; /* Green Border */
+        }
+        .input-summary {
+            margin-top: 20px;
+        }
+        .input-summary h2 {
+            color: #388e3c; /* Darker Green Text */
+        }
+        .input-summary p {
+            margin: 5px 0;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Power Prediction Result</h1>
+        <div class="result">
+            <h2>Predicted Power:</h2>
+            <p><strong>{{ predicted_power }} kW</strong></p>
+        </div>
+        <div class="input-summary">
+            <h2>Input Summary:</h2>
+            <p><strong>Input Thickness:</strong> {{ input_thick }} mm</p>
+            <p><strong>Input Width:</strong> {{ input_width }} mm</p>
+            <p><strong>IP Weight:</strong> {{ ip_wt }}</p>
+            <p><strong>Actual/Average Thickness:</strong> {{ thickness_actual }} mm</p>
+            <p><strong>Number of Passes:</strong> {{ number_of_passes }}</p>
+        </div>
+        <a href="/" class="back-link">Make Another Prediction</a>
+    </div>
+</body>
+</html>
