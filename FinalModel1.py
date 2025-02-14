@@ -3,9 +3,9 @@ import numpy as np
 import pandas as pd
 
 # Load the saved model and scaler
-model_path = 'D:\\Energy_Models\\xgboost_model.joblib'
-scaler_path = 'D:\\Energy_Models\\standard_scaler.joblib'
-feature_names_path = 'D:\\Energy_Models\\feature_names.joblib'
+model_path = 'xgboost_model.joblib'
+scaler_path = 'standard_scaler.joblib'
+feature_names_path = 'feature_names.joblib'
 
 model = joblib.load(model_path)
 scaler = joblib.load(scaler_path)
